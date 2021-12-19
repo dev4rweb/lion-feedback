@@ -11,7 +11,7 @@
 
                     <div class="card-body">
                         @if(count($messages) > 0)
-                            <ul class="list-group">
+                            <ul class="list-group" id="listGroup">
                                 @foreach($messages as $msg)
 
                                     @if($msg->from == $currentUser->id)
@@ -51,3 +51,4 @@
         </div>
     </div>
 @endsection
+@include('home-show-script', [$currentUser, $user])
